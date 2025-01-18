@@ -1,8 +1,8 @@
 {
-  "name": "cat-energy-30",
+  "name": "new project",
   "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "OG",
   "type": "module",
   "engines": {
     "node": "^18.18 || ^20.9"
