@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>FindEdu</title>
+  <meta name="description" content="Сервис-агрегатор по подбору образовательных курсов.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicons/16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicons/32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="preload" href="./fonts/inter-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/inter-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/inter-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/inter-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/inter-800.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./scripts/index.js" defer="defer"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__top-content">
+        <a class="header__logo header__logo--index logo" href="#">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1024px)" srcset="./images/logo-desc-main.svg" width="118" height="39">
+            <img src="./images/logo-mob-main.svg" alt="Логотип интернет-платформы 'FindEdu'." width="23" height="27" loading="lazy">
+          </picture>
+        </a>
+        <ul class="header__menu menu">
+          <li class="menu__item">
+            <a class="menu__link menu__link--current" href="#">Главная</a>
+          </li>
+          <li class="menu__item menu__item--current">
+            <a class="menu__link" href="#">Курсы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Блог</a>
+          </li>
+        </ul>
+        <button class="header__button burger" type="button">
+          <span class="burger__span"></span>
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+      </div>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Дизайн</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">3D анимация</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">3D MAX</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">3D-моделирование</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Adobe After Effects</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Adobe Illustrator</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Adobe Photoshop</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Отрисовка иллюстраций</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Программирование</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Web-разработка</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">DevOps</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">JavaScript-разработка</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Аналитика</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Data Science</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Продуктовая аналитика</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Web-аналитика</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Менеджмент</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Product-менеджмент</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Личностный рост</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Управление разработкой и IT</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Маркетинг</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Web-аналитика</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">SMM-продвижение</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Интернет-маркетинг</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--finance" href="#">Финансы</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">SEO-продвижение</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Копирайтинг</a>
+              </li>
+              <li class="nav__submenu-item">
+                <a class="nav__submenu-link" href="#">Контент-маркетинг</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="hero__wrapper">
+        <div class="hero__main-content">
+          <h1 class="hero__title">FindEdu - все для<br>выбора новой профессии в&nbsp;одном месте</h1>
+          <p class="hero__desc">Изучение тем на вебинарах с преподавателями, личные консультации с наставником. После прохождения курса с наставником. После прохождения курса</p>
+          <button class="hero__button button" type="button">Сравнить курсы</button>
+        </div>
+        <div class="hero__additional-content">
+          <picture>
+            <source type="image/webp" srcset="./images/hero-man@1x.webp, ./images/hero-man@2x.webp 2x" width="646" height="578">
+            <img src="./images/hero-man@1x.png" srcset="./images/hero-man@2x.png 2x" width="646" height="578" loading="lazy" alt="">
+          </picture>
+          <div class="hero__card card">
+            <div class="card__main-content">
+              <h4 class="card__title">UX/UI designer</h4>
+              <p class="card__desc">UX/UI-дизайнер — одна из самых востребованных профессий 2020 года</p>
+            </div>
+            <div class="card__additional-content">
+              <p class="card__price">120 000 рублей</p>
+              <p class="card__companies">1 561 компания</p>
+            </div>
+            <ul class="card__progress-list">
+              <li class="card__progress-item card__progress-item--one">
+                <span class="visually-hidden">Школа 1.</span>
+                <div class="card__progress"></div>
+                <div class="card__progress-value"></div>
+              </li>
+              <li class="card__progress-item card__progress-item--two">
+                <span class="visually-hidden">Школа 2.</span>
+                <div class="card__progress"></div>
+                <div class="card__progress-value"></div>
+              </li>
+              <li class="card__progress-item card__progress-item--three">
+                <span class="visually-hidden">Школа 3.</span>
+                <div class="card__progress"></div>
+                <div class="card__progress-value"></div>
+              </li>
+              <li class="card__progress-item card__progress-item--four">
+                <span class="visually-hidden">Школа 4.</span>
+                <div class="card__progress"></div>
+                <div class="card__progress-value"></div>
+              </li>
+              <li class="card__progress-item card__progress-item--five">
+                <span class="visually-hidden">Школа 5.</span>
+                <div class="card__progress"></div>
+                <div class="card__progress-value"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="direction">
+      <div class="direction__wrapper">
+        <h2 class="direction__title title">Выбери направление</h2>
+        <div class="direction__slider swiper" data-slider="direction-slider">
+          <ul class="direction__list swiper-wrapper">
+            <li class="direction__item direction__item--design swiper-slide">
+              <a class="direction__card" href="#">
+                <h3 class="direction__subtitle">Дизайн</h3>
+                <ul class="direction__sublist">
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--one">Web-дизайн</div>
+                    <div class="direction__subitem direction__subitem--two">Дизайн интерьеров</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--three">3D-моделирование</div>
+                    <div class="direction__subitem direction__subitem--four">Motion-дизайн</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--five">Графический дизайн</div>
+                    <div class="direction__subitem direction__subitem--six">3D-анимация</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--seven">UX/UI дизайн</div>
+                    <div class="direction__subitem direction__subitem--eight">UX/UI дизайн</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--nine">Геймдизайн</div>
+                    <div class="direction__subitem direction__subitem--ten">Adobe After Effects</div>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="direction__item direction__item--programming swiper-slide">
+              <a class="direction__card" href="#">
+                <h3 class="direction__subtitle">Программирование</h3>
+                <ul class="direction__sublist">
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--one">Web-разработка</div>
+                    <div class="direction__subitem direction__subitem--two">DevOps</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--three">JavaScript-разработка</div>
+                    <div class="direction__subitem direction__subitem--four">ReactJS</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--five">Мобильная разработка</div>
+                    <div class="direction__subitem direction__subitem--six">GIT</div>
+                  </li>
+                    <li class="direction__subitem direction__subitem--seven">Системное администрирование</li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--nine">Верстка на HTML/CSS</div>
+                    <div class="direction__subitem direction__subitem--ten">Unity</div>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="direction__item direction__item--management swiper-slide">
+              <a class="direction__card" href="#">
+                <h3 class="direction__subtitle">Менеджмент</h3>
+                <ul class="direction__sublist">
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--one">Product-менеджмент</div>
+                    <div class="direction__subitem direction__subitem--two">Личностный рост</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--three">Управление разработкой и IT</div>
+                    <div class="direction__subitem direction__subitem--four">AGile</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--five">Бренд-менеджмент</div>
+                    <div class="direction__subitem direction__subitem--six">Запуск стартапов</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--seven">Финансовая аналитика</div>
+                    <div class="direction__subitem direction__subitem--eight">Бухгалтерия</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--nine">Управление в SMM</div>
+                    <div class="direction__subitem direction__subitem--ten">IT-рекрутмент</div>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="direction__item direction__item--analytics swiper-slide">
+              <a class="direction__card" href="#">
+                <h3 class="direction__subtitle">Аналитика</h3>
+                <ul class="direction__sublist">
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--one">Data Science</div>
+                    <div class="direction__subitem direction__subitem--two">Продуктовая аналитика</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--three">Web-аналитика</div>
+                    <div class="direction__subitem direction__subitem--four">Системная аналитика</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--five">Бизнес-аналитика</div>
+                    <div class="direction__subitem direction__subitem--six">Аналитика на R</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--seven">Работа с Excel и Google таблицами</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--nine">Машинное обучение</div>
+                    <div class="direction__subitem direction__subitem--ten">Нейронные сети</div>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="direction__item direction__item--marketing swiper-slide">
+              <a class="direction__card" href="#">
+                <h3 class="direction__subtitle">Маркетинг</h3>
+                <ul class="direction__sublist">
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--one">Web-аналитика</div>
+                    <div class="direction__subitem direction__subitem--two">SMM-продвижение</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--three">Интернет-маркетинг</div>
+                    <div class="direction__subitem direction__subitem--four">PR-менеджмент</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--five">SEO-продвижение</div>
+                    <div class="direction__subitem direction__subitem--six">Копирайтинг</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--seven">Контент-маркетинг</div>
+                    <div class="direction__subitem direction__subitem--eight">SERM и репутация</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--nine">Маркетинговая аналитика</div>
+                    <div class="direction__subitem direction__subitem--ten">Google Ads</div>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="direction__item direction__item--finance swiper-slide">
+              <a class="direction__card" href="#">
+                <h3 class="direction__subtitle">Финансы</h3>
+                <ul class="direction__sublist">
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--one">Web-аналитика</div>
+                    <div class="direction__subitem direction__subitem--two">SMM-продвижение</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--three">Интернет-маркетинг</div>
+                    <div class="direction__subitem direction__subitem--four">PR-менеджмент</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--five">SEO-продвижение</div>
+                    <div class="direction__subitem direction__subitem--six">Копирайтинг</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--seven">Контент-маркетинг</div>
+                    <div class="direction__subitem direction__subitem--eight">SERM и репутация</div>
+                  </li>
+                  <li class="direction__subitem-wrapper">
+                    <div class="direction__subitem direction__subitem--nine">Маркетинговая аналитика</div>
+                    <div class="direction__subitem direction__subitem--ten">Google Ads</div>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="direction__controller slider-controller">
+          <button class="direction__button direction__button--prev slider-controller__button slider-controller__button--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
+          <button class="direction__button direction__button--next slider-controller__button slider-controller__button--next" type="button">
+            <span class="visually-hidden">Следующий слайд.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper">
+        <div class="advantages__card-wrapper">
+          <h2 class="advantages__title title">Агрегируем курсы по самым актуальным темам для новичков и&nbsp;практикующих специалистов.</h2>
+          <div class="advantages__card">
+              <div class="advantages__slider swiper" data-slider="advantages-slider">
+                <ul class="advantages__content-list swiper-wrapper">
+                  <li class="advantages__content-item advantages__content-item--users advantages__content-item--current swiper-slide">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 1024px)" srcset="./images/users-big@1x.webp, ./images/users-big@2x.webp 2x" width="277" height="249">
+                      <source type="image/webp" srcset="./images/users-big@1x.webp, ./images/users-big@2x.webp 2x" width="424" height="383">
+                      <source type="image/png" media="(max-width: 1024px)" srcset="./images/users-big@1x.png, ./images/users-big@2x.png 2x" width="277" height="249">
+                      <img src="./images/users-big@1x.png" srcset="./images/users-big@2x.png 2x" width="424" height="383" loading="lazy" alt="">
+                    </picture>
+                    <h4 class="advantages__content-title">300+ довольных пользователей</h4>
+                    <p class="advantages__content-desc">Дополнительно в этом методе<br>есть кнопка «Объединить по строкам». С помощью неё можно объединить ячейки выбранного диапазона построчно.</p>
+                  </li>
+                  <li class="advantages__content-item advantages__content-item--courses swiper-slide">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 1024px)" srcset="./images/courses-big@1x.webp, ./images/courses-big@2x.webp 2x" width="280" height="280">
+                      <source type="image/webp" srcset="./images/courses-big@1x.webp, ./images/courses-big@2x.webp 2x" width="425" height="425">
+                      <source type="image/png" media="(max-width: 1024px)" srcset="./images/courses-big@1x.png, ./images/courses-big@2x.png 2x" width="280" height="280">
+                      <img src="./images/courses-big@1x.png" srcset="./images/courses-big@2x.png 2x" width="425" height="425" loading="lazy" alt="">
+                    </picture>
+                    <h4 class="advantages__content-title">1000+ образовательных курсов</h4>
+                    <p class="advantages__content-desc">Дополнительно в этом методе есть кнопка «Объединить по строкам». С помощью неё можно объединить ячейки выбранного диапазона построчно.</p>
+                  </li>
+                  <li class="advantages__content-item advantages__content-item--mentors swiper-slide">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 1024px)" srcset="./images/mentors-big@1x.webp, ./images/mentors-big@2x.webp 2x" width="280" height="280">
+                      <source type="image/webp" srcset="./images/mentors-big@1x.webp, ./images/mentors-big@2x.webp 2x" width="425" height="425">
+                      <source type="image/png" media="(max-width: 1024px)" srcset="./images/mentors-big@1x.png, ./images/mentors-big@2x.png 2x" width="280" height="280">
+                      <img src="./images/mentors-big@1x.png" srcset="./images/mentors-big@2x.png 2x" width="425" height="425" loading="lazy" alt="">
+                    </picture>
+                    <h4 class="advantages__content-title">300+ довольных пользователей</h4>
+                    <p class="advantages__content-desc">Дополнительно в этом методе есть кнопка «Объединить по строкам». С помощью неё можно объединить ячейки выбранного диапазона построчно.</p>
+                  </li>
+                </ul>
+              </div>
+              <ul class="advantages__list">
+                <li class="advantages__item advantages__item--users advantages__item--current">
+                  <a class="advantages__button" href="#">
+                    <h3 class="advantages__item-title">Довольные пользователи</h3>
+                    <p class="advantages__item-desc">Изучение тем на вебинарах с преподавателями, наставником. После прохождения курса вы будете</p>
+                  </a>
+                </li>
+                <li class="advantages__item advantages__item--courses">
+                  <a class="advantages__button" href="#">
+                    <h3 class="advantages__item-title">Образовательные курсы</h3>
+                    <p class="advantages__item-desc">Изучение тем на вебинарах с преподавателями, наставником. После прохождения курса вы будете</p>
+                  </a>
+                </li>
+                <li class="advantages__item advantages__item--mentors">
+                  <a class="advantages__button" href="#">
+                    <h3 class="advantages__item-title">Менторы из больших компаний</h3>
+                    <p class="advantages__item-desc">Изучение тем на вебинарах с преподавателями, наставником. После прохождения курса вы будете</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="advantages__controller slider-controller">
+              <button class="advantages__slider-button advantages__slider-button--prev slider-controller__button" type="button">
+                <span class="visually-hidden">Предыдущий слайд.</span>
+              </button>
+              <button class="advantages__slider-button advantages__slider-button--next slider-controller__button slider-controller__button--next" type="button">
+                <span class="visually-hidden">Следующий слайд.</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__copyright-wrapper">
+        <a class="footer__logo-link" href="#">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1024px)" srcset="./images/logo-secondary.svg" width="124" height="41">
+            <img src="./images/logo-secondary.svg" alt="Логотип интернет-платформы 'FindEdu'." width="83" height="27" loading="lazy">
+          </picture>
+        </a>
+        <p class="footer__copyright">© FindEdu 2022.<br>Все права защищены.</p>
+      </div>
+      <ul class="footer__menu">
+        <li class="footer__item footer__item--current">
+          <h3 class="footer__subtitle">Категории</h3>
+          <ul class="footer__submenu">
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Дизайн</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Программирование</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Маркетинг</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Менеджмент</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Аналитика</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__item">
+          <h3 class="footer__subtitle">Популярные направления</h3>
+          <ul class="footer__submenu">
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Веб-разработка</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Java-разработка</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Python-разработка</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">SMM-продвижение</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Графический дизайн</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Дизайн интерьеров</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__item footer__item--info">
+          <h3 class="footer__subtitle">Общая информация</h3>
+          <ul class="footer__submenu">
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">О проекте</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Политика конфиденциальности</a>
+            </li>
+            <li class="footer__subitem">
+              <a class="footer__link" href="#">Пользовательское соглашение</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

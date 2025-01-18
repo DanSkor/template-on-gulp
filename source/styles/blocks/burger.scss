@@ -1,0 +1,95 @@
+.burger {
+  display: none;
+  position: relative;
+  width: 22px;
+  height: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease;
+  z-index: 101;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &--disabled {
+    opacity: 0.2;
+    cursor: default;
+    outline: none;
+  }
+
+  &--active {
+    width: 22px;
+    height: 16px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background-color: #323232;
+    transition: all 0.3s ease-in;
+    border-radius: 1px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 2px;
+    background-color: #323232;
+    transition: all 0.3s ease-in;
+    border-radius: 1px;
+  }
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.burger--active.burger {
+  &::before {
+    width: 16px;
+    top: 8px;
+    left: 3px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    width: 16px;
+    bottom: 6px;
+    left: 3px;
+    transform: rotate(-45deg);
+  }
+}
+
+.burger__span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 2px;
+  background-color: #323232;
+  transition: all 0.3s ease-in;
+  border-radius: 1px;
+}
+
+.burger--active .burger__span {
+  transform: translate(-100%, -50%);
+}

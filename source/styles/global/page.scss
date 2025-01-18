@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #181515;
+  background-color: $bg-grey;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: $mobile;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+}

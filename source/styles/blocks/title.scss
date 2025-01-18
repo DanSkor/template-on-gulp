@@ -1,0 +1,10 @@
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  color: #302828;
+
+  @media (max-width: 1024px) {
+    font-weight: 700;
+    font-size: 21px;
+  }
+}
