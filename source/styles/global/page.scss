@@ -16,6 +16,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   min-width: $mobile;
+  max-width: 1440px;
 
   @media (max-width: 1024px) {
     font-size: 14px;
